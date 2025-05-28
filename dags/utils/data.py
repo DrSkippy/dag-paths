@@ -2,18 +2,43 @@ import json
 import logging
 import pandas as pd
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-def read_dag_data(data_file: Path) -> Dict:
+class NodeTemporalInfo:
+    """Class to store temporal information for a node."""
+    def __init__(self, start_date: Optional[str], target_date: Optional[str], closed_date: Optional[str]):
+        self.start_date = self._parse_date(start_date)
+        self.target_date = self._parse_date(target_date)
+        self.closed_date = self._parse_date(closed_date)
+    
+    def _parse_date(self, date_str: Optional[str]) -> Optional[datetime]:
+        """Parse date string to datetime object."""
+        if not date_str or pd.isna(date_str):
+            return None
+        try:
+            return pd.to_datetime(date_str)
+        except Exception as e:
+            logger.warning(f"Failed to parse date '{date_str}': {e}")
+            return None
+    
+    def __str__(self) -> str:
+        return (f"Start: {self.start_date}, "
+                f"Target: {self.target_date}, "
+                f"Closed: {self.closed_date}")
+
+def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
     """Read DAG data from CSV file.
     
     Args:
         data_file (Path): Path to the CSV data file
         
     Returns:
-        dict: DAG data structure with nodes and their relationships
+        tuple: (dag_data, temporal_data)
+            dag_data: DAG data structure with nodes and their relationships
+            temporal_data: Dictionary mapping node IDs to their temporal information
         
     Raises:
         FileNotFoundError: If the data file doesn't exist
@@ -27,6 +52,7 @@ def read_dag_data(data_file: Path) -> Dict:
         
         # Create DAG data structure
         dag_data = {}
+        temporal_data = {}
         
         # Process each row
         for _, row in df.iterrows():
@@ -42,6 +68,13 @@ def read_dag_data(data_file: Path) -> Dict:
                     'type': row['WORK_ITEM_TYPE_NAME'],
                     'state': row['WORK_ITEM_RELATIONSHIP_STATE_NAME']
                 }
+                
+                # Store temporal information
+                temporal_data[work_item_id] = NodeTemporalInfo(
+                    start_date=row['START_DATETIME'],
+                    target_date=row['TARGET_DATETIME'],
+                    closed_date=row['CLOSED_DATETIME']
+                )
             
             # Add relationship
             if relationship_type == 'Predecessor':
@@ -53,7 +86,15 @@ def read_dag_data(data_file: Path) -> Dict:
         logger.debug(f"Found {sum(len(d['predecessors']) for d in dag_data.values())} predecessor relationships")
         logger.debug(f"Found {sum(len(d['successors']) for d in dag_data.values())} successor relationships")
         
-        return dag_data
+        # Log temporal information summary
+        temporal_summary = {
+            'with_start_date': sum(1 for t in temporal_data.values() if t.start_date is not None),
+            'with_target_date': sum(1 for t in temporal_data.values() if t.target_date is not None),
+            'with_closed_date': sum(1 for t in temporal_data.values() if t.closed_date is not None)
+        }
+        logger.info(f"Temporal data summary: {temporal_summary}")
+        
+        return dag_data, temporal_data
     except Exception as e:
         logger.error(f"Error reading data file: {e}")
         raise

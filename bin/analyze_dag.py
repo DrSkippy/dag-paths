@@ -48,6 +48,17 @@ def print_network_metrics(metrics):
     for node, centrality in sorted_out_centrality:
         print(f"Node {node}: {centrality:.3f}")
 
+def print_temporal_info(path, temporal_data):
+    """Print temporal information for nodes in a path."""
+    print("\nTemporal Information for Path:")
+    print("=" * 50)
+    for node in path:
+        if node in temporal_data:
+            print(f"\nNode {node}:")
+            print(f"  {temporal_data[node]}")
+        else:
+            print(f"\nNode {node}: No temporal data available")
+
 def main():
     # Set up logging
     logger = setup_logging()
@@ -62,7 +73,7 @@ def main():
     
     try:
         # Read and process the data
-        data = read_dag_data(data_file)
+        data, temporal_data = read_dag_data(data_file)
         G = create_dag(data)
         
         # Perform network analysis
@@ -79,11 +90,22 @@ def main():
             print(f"Number of edges in longest path: {len(longest_path_by_edges) - 1}")
             print(f"Number of nodes in longest path: {len(longest_path_by_nodes)}")
             
+            # Print temporal information for the longest path
+            print_temporal_info(longest_path_by_edges, temporal_data)
+            
             # Log the same information
             logger.info("Longest Path Analysis:")
             logger.info(f"Longest path: {' -> '.join(longest_path_by_edges)}")
             logger.info(f"Number of edges in longest path: {len(longest_path_by_edges) - 1}")
             logger.info(f"Number of nodes in longest path: {len(longest_path_by_nodes)}")
+            
+            # Log temporal information
+            logger.info("Temporal information for longest path:")
+            for node in longest_path_by_edges:
+                if node in temporal_data:
+                    logger.info(f"Node {node}: {temporal_data[node]}")
+                else:
+                    logger.info(f"Node {node}: No temporal data available")
         else:
             print("\nNo paths found in the DAG")
             logger.info("No paths found in the DAG")
