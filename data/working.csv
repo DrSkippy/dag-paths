@@ -1,6 +1,6 @@
 ﻿WORK_ITEM_ID,WORK_ITEM_RELATIONSHIP_ID,WORK_ITEM_RELATIONSHIP_TYPE,WORK_ITEM_TYPE_NAME,WORK_ITEM_RELATIONSHIP_STATE_NAME,START_DATETIME,TARGET_DATETIME,CLOSED_DATETIME
 188671,187203,Successor,User Story,Removed,,,
-188682,187605,Predecessor,Feature, iHealth,,Tech Health,
+188682,187605,Predecessor,Feature,Closed,,,27:19.0
 188690,230634,Predecessor,Feature,Closed,00:00.0,00:00.0,56:29.0
 188737,189415,Successor,User Story,Closed,,,53:23.0
 188737,196733,Successor,User Story,Reviewing,,,
@@ -13,7 +13,7 @@
 188742,229045,Predecessor,User Story,Closed,,,55:30.0
 188745,186845,Predecessor,User Story,Ready,,,
 188776,196789,Successor,User Story,Closed,,,33:29.0
-188789,235990,Successor,User Story, Article) (STG)",Tech Health,,15:01.0
+188789,235990,Successor,User Story,Closed,,,38:07.0
 188789,235996,Predecessor,User Story,Closed,,,30:36.0
 188806,206579,Predecessor,User Story,New,,,
 188909,192281,Successor,User Story,Closed,,,10:40.0
@@ -33,7 +33,7 @@
 189274,189280,Predecessor,User Story,Closed,,,02:51.0
 189280,189274,Successor,User Story,Closed,,,49:20.0
 189280,247956,Predecessor,User Story,Closed,,,57:31.0
-189280,253659,Predecessor,User Story, feature toggle enabled)",Major Initiative,,48:51.0
+189280,253659,Predecessor,User Story,Closed,,,48:51.0
 189280,259046,Successor,User Story,Closed,,,49:34.0
 189280,260498,Predecessor,User Story,Closed,,,27:42.0
 189280,260499,Predecessor,User Story,Closed,,,46:39.0
@@ -58,8 +58,8 @@
 189704,161932,Predecessor,User Story,Closed,,,51:09.0
 189704,183700,Predecessor,User Story,Closed,,,40:29.0
 189758,186031,Predecessor,User Story,Closed,,,14:23.0
-189758,189760,Successor,User Story, Connect an API of the data with Apigee",Major Initiative,,14:57.0
-189758,192796,Successor,User Story, connect an API of the data with Apigee",Major Initiative,,46:16.0
+189758,189760,Successor,User Story,Closed,,,40:03.0
+189758,192796,Successor,User Story,Ready,,,
 189760,189758,Predecessor,User Story,Closed,,,28:59.0
 189760,191716,Predecessor,User Story,Ready,,,
 189812,189414,Successor,User Story,New,,,
@@ -82,7 +82,7 @@
 190161,176989,Predecessor,User Story,Closed,,,53:30.0
 264636,293240,Predecessor,Decision,Active,,,
 273640,293291,Successor,User Story,New,,,
-281992,292383,Predecessor,Decision, for every order line irrespective of the type of item,,,
+281992,292383,Predecessor,Decision,New,,,
 283466,293360,Predecessor,Issue,New,,,
 290801,292384,Successor,User Story,New,,,
 291059,292995,Predecessor,Task,Closed,,,09:18.0
