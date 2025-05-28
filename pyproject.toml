@@ -1,0 +1,20 @@
+[project]
+name = "dag-paths"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Scott Hendrickson",email = "scott@drskippy.net"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "networkx (>=3.4.2,<4.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "notebook (>=7.4.3,<8.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

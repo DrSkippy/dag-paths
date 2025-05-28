@@ -1,0 +1,101 @@
+﻿WORK_ITEM_ID,WORK_ITEM_RELATIONSHIP_ID,WORK_ITEM_RELATIONSHIP_TYPE,WORK_ITEM_TYPE_NAME,WORK_ITEM_RELATIONSHIP_STATE_NAME,START_DATETIME,TARGET_DATETIME,CLOSED_DATETIME
+188671,187203,Successor,User Story,Removed,,,
+188682,187605,Predecessor,Feature, iHealth,,Tech Health,
+188690,230634,Predecessor,Feature,Closed,00:00.0,00:00.0,56:29.0
+188737,189415,Successor,User Story,Closed,,,53:23.0
+188737,196733,Successor,User Story,Reviewing,,,
+188738,176630,Predecessor,User Story,Closed,,,11:35.0
+188740,187801,Predecessor,User Story,Closed,,,49:20.0
+188742,177086,Predecessor,User Story,Closed,,,37:21.0
+188742,215882,Predecessor,User Story,Closed,,,57:14.0
+188742,229033,Predecessor,User Story,Removed,,,
+188742,229044,Predecessor,User Story,Closed,,,55:08.0
+188742,229045,Predecessor,User Story,Closed,,,55:30.0
+188745,186845,Predecessor,User Story,Ready,,,
+188776,196789,Successor,User Story,Closed,,,33:29.0
+188789,235990,Successor,User Story, Article) (STG)",Tech Health,,15:01.0
+188789,235996,Predecessor,User Story,Closed,,,30:36.0
+188806,206579,Predecessor,User Story,New,,,
+188909,192281,Successor,User Story,Closed,,,10:40.0
+188935,189169,Successor,User Story,Removed,,,
+188941,189646,Successor,User Story,Closed,,,57:50.0
+188945,188946,Successor,User Story,Closed,,,28:52.0
+188946,188945,Predecessor,User Story,Closed,,,22:00.0
+188976,186934,Predecessor,User Story,Closed,,,29:11.0
+189169,188935,Predecessor,User Story,Removed,,,
+189186,202169,Predecessor,Epic,Closed,00:00.0,00:00.0,27:59.0
+189205,191430,Successor,User Story,Closed,,,59:21.0
+189272,246602,Predecessor,User Story,Closed,,,45:21.0
+189272,247946,Successor,User Story,Closed,,,45:15.0
+189272,250025,Successor,User Story,Closed,,,50:15.0
+189273,221939,Predecessor,User Story,Closed,,,27:48.0
+189273,244570,Successor,User Story,Closed,,,43:01.0
+189274,189280,Predecessor,User Story,Closed,,,02:51.0
+189280,189274,Successor,User Story,Closed,,,49:20.0
+189280,247956,Predecessor,User Story,Closed,,,57:31.0
+189280,253659,Predecessor,User Story, feature toggle enabled)",Major Initiative,,48:51.0
+189280,259046,Successor,User Story,Closed,,,49:34.0
+189280,260498,Predecessor,User Story,Closed,,,27:42.0
+189280,260499,Predecessor,User Story,Closed,,,46:39.0
+189280,260875,Successor,User Story,Closed,,,49:00.0
+189280,263495,Successor,User Story,Closed,,,19:07.0
+189280,266959,Successor,User Story,Closed,,,33:32.0
+189414,177088,Predecessor,User Story,Closed,,,08:00.0
+189414,189812,Predecessor,User Story,Closed,,,44:53.0
+189415,188737,Predecessor,User Story,Closed,,,56:17.0
+189415,201469,Predecessor,User Story,Reviewing,,,
+189415,201491,Predecessor,User Story,New,,,
+189415,204254,Predecessor,User Story,Closed,,,46:11.0
+189415,213581,Predecessor,User Story,Closed,,,12:07.0
+189566,189947,Predecessor,User Story,Removed,,,
+189582,176428,Successor,User Story,Closed,,,25:13.0
+189586,174449,Successor,Feature,Closed,,,26:42.0
+189640,183823,Successor,User Story,Removed,,,
+189646,188941,Predecessor,User Story,Closed,,,55:13.0
+189646,195684,Predecessor,User Story,Closed,,,00:27.0
+189693,183281,Predecessor,User Story,Closed,,,41:15.0
+189704,151665,Successor,User Story,Closed,,,15:59.0
+189704,161932,Predecessor,User Story,Closed,,,51:09.0
+189704,183700,Predecessor,User Story,Closed,,,40:29.0
+189758,186031,Predecessor,User Story,Closed,,,14:23.0
+189758,189760,Successor,User Story, Connect an API of the data with Apigee",Major Initiative,,14:57.0
+189758,192796,Successor,User Story, connect an API of the data with Apigee",Major Initiative,,46:16.0
+189760,189758,Predecessor,User Story,Closed,,,28:59.0
+189760,191716,Predecessor,User Story,Ready,,,
+189812,189414,Successor,User Story,New,,,
+189812,204250,Successor,User Story,New,,,
+189812,206970,Successor,User Story,Closed,,,55:07.0
+189847,174196,Predecessor,User Story,Closed,,,31:34.0
+189847,174760,Predecessor,User Story,Closed,,,33:51.0
+189867,178535,Predecessor,User Story,Closed,,,23:19.0
+189868,183217,Predecessor,User Story,Closed,,,27:40.0
+189896,174997,Predecessor,User Story,Closed,,,32:21.0
+189947,189566,Successor,User Story,Closed,,,54:14.0
+189949,189951,Successor,User Story,Closed,,,02:40.0
+189951,189949,Predecessor,User Story,Closed,,,02:40.0
+189989,191446,Successor,User Story,Closed,,,23:39.0
+189989,193995,Successor,User Story,Closed,,,41:12.0
+190057,174196,Predecessor,User Story,Closed,,,31:34.0
+190057,174753,Successor,User Story,Closed,,,12:40.0
+190063,211459,Predecessor,User Story,Closed,,,15:39.0
+190109,183756,Predecessor,User Story,Closed,,,49:16.0
+190161,176989,Predecessor,User Story,Closed,,,53:30.0
+264636,293240,Predecessor,Decision,Active,,,
+273640,293291,Successor,User Story,New,,,
+281992,292383,Predecessor,Decision, for every order line irrespective of the type of item,,,
+283466,293360,Predecessor,Issue,New,,,
+290801,292384,Successor,User Story,New,,,
+291059,292995,Predecessor,Task,Closed,,,09:18.0
+291059,293147,Predecessor,Task,Closed,,,12:12.0
+291059,292994,Predecessor,Task,Closed,,,14:09.0
+292383,281992,Successor,Feature,Solutioning,00:00.0,00:00.0,
+292384,290801,Predecessor,User Story,Resolved,,,
+292710,293358,Successor,Feature,New,,,
+292801,292892,Successor,User Story,Implementing,,,
+292892,292801,Predecessor,User Story,Implementing,,,
+292994,291059,Successor,Bug,Active,,,
+292995,291059,Successor,Bug,Active,,,
+293147,291059,Successor,Bug,Active,,,
+293240,264636,Successor,Feature,Solutioning,00:00.0,00:00.0,
+293291,273640,Predecessor,User Story,Closed,,,36:38.0
+293358,292710,Predecessor,Feature,QA,00:00.0,12:00.0,
