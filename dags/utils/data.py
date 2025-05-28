@@ -57,7 +57,7 @@ def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
         # Process each row
         for _, row in df.iterrows():
             work_item_id = str(row['WORK_ITEM_ID'])
-            relationship_id = str(row['WORK_ITEM_RELATIONSHIP_ID'])
+            relationship_id = str(row['WORK_ITEM_RELATED_ID'])
             relationship_type = row['WORK_ITEM_RELATIONSHIP_TYPE']
             
             # Initialize node if not exists
