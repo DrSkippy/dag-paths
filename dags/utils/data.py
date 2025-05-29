@@ -69,8 +69,9 @@ def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
                     'state': row['WORK_ITEM_RELATIONSHIP_STATE_NAME']
                 }
                 
+            if relationship_id not in temporal_data:
                 # Store temporal information
-                temporal_data[work_item_id] = NodeTemporalInfo(
+                temporal_data[relationship_id] = NodeTemporalInfo(
                     start_date=row['START_DATETIME'],
                     target_date=row['TARGET_DATETIME'],
                     closed_date=row['CLOSED_DATETIME']
