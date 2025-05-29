@@ -1,35 +1,62 @@
 
 Network Analysis:
-Total nodes: 2070
-Total edges: 2480
+Total nodes: 517
+Total edges: 759
 Is DAG: True
 
 Node Types:
-  Feature: 1836
-  Unknown: 234
+  Feature: 491
+  Unknown: 26
 
 Node States:
-  New: 199
-  QA: 39
-  Reviewing: 53
-  Implementing: 150
+  Implementing: 101
+  Reviewing: 27
   Planning: 9
-  Closed: 747
-  Dev Complete: 235
-  Solutioning: 82
-  Removed: 252
-  UAT: 14
-  Ready: 21
-  Unknown: 234
-  Prod Validating: 10
-  Active: 7
-  Awaiting Deployment: 16
-  Rejected: 2
+  Dev Complete: 105
+  Solutioning: 49
+  UAT: 7
+  Closed: 67
+  QA: 13
+  New: 101
+  Unknown: 26
+  Ready: 10
+  Awaiting Deployment: 2
 
 Top 20 Paths by Target Date:
 
 Path 1:
-Path: 263541 -> 266292 -> 266305 -> 269366 -> 269019
+Path: 287294 -> 265803 -> 287104 -> 269019
+
+Path Details:
+Number of nodes: 4
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2025-03-31 17:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 2:
+Path: 287294 -> 265803 -> 287104 -> 269366 -> 269019
 
 Path Details:
 Number of nodes: 5
@@ -39,33 +66,33 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
   Closed date: None
 
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
   Closed date: None
 
 Node: 269366
-  In-Degree: 6 Out-Degree: 2
+  In-Degree: 5 Out-Degree: 2
   Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Path 2:
-Path: 263541 -> 266292 -> 266305 -> 269366 -> 276790 -> 269022 -> 269019
+Path 3:
+Path: 287294 -> 265803 -> 287104 -> 269366 -> 276790 -> 269022 -> 269019
 
 Path Details:
 Number of nodes: 7
@@ -75,43 +102,280 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
   Closed date: None
 
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
   Closed date: None
 
 Node: 269366
-  In-Degree: 6 Out-Degree: 2
+  In-Degree: 5 Out-Degree: 2
   Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
   Closed date: None
 
 Node: 276790
-  In-Degree: 5 Out-Degree: 1
+  In-Degree: 4 Out-Degree: 1
   Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
   Closed date: None
 
 Node: 269022
-  In-Degree: 9 Out-Degree: 2
+  In-Degree: 5 Out-Degree: 1
   Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Path 3:
-Path: 263541 -> 266292 -> 266305 -> 287104 -> 269019
+Path 4:
+Path: 287294 -> 265803 -> 287104 -> 276790 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 6
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-12-08 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 276790
+  In-Degree: 4 Out-Degree: 1
+  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 5:
+Path: 287294 -> 265803 -> 269021 -> 269019
+
+Path Details:
+Number of nodes: 4
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-11-20 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 269021
+  In-Degree: 1 Out-Degree: 2
+  Start date: 2024-11-20 00:00:00  Target date: 2025-08-29 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 6:
+Path: 287294 -> 265803 -> 269021 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 5
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-11-20 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 269021
+  In-Degree: 1 Out-Degree: 2
+  Start date: 2024-11-20 00:00:00  Target date: 2025-08-29 00:00:00
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 7:
+Path: 287294 -> 265803 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 4
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-12-08 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 8:
+Path: 287294 -> 265803 -> 287686 -> 269019
+
+Path Details:
+Number of nodes: 4
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2025-03-31 17:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 287686
+  In-Degree: 1 Out-Degree: 2
+  Start date: 2025-04-18 00:00:00  Target date: 2025-09-30 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 9:
+Path: 287294 -> 265803 -> 287686 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 5
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-12-08 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 265803
+  In-Degree: 1 Out-Degree: 4
+  Start date: None  Target date: None
+  Closed date: None
+
+Node: 287686
+  In-Degree: 1 Out-Degree: 2
+  Start date: 2025-04-18 00:00:00  Target date: 2025-09-30 00:00:00
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 10:
+Path: 287294 -> 266292 -> 287104 -> 269019
+
+Path Details:
+Number of nodes: 4
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-10-23 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 266292
+  In-Degree: 2 Out-Degree: 6
+  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 11:
+Path: 287294 -> 266292 -> 287104 -> 269366 -> 269019
 
 Path Details:
 Number of nodes: 5
@@ -121,19 +385,14 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
   Closed date: None
 
 Node: 287104
@@ -141,13 +400,64 @@ Node: 287104
   Start date: None  Target date: 2026-01-30 00:00:00
   Closed date: None
 
+Node: 269366
+  In-Degree: 5 Out-Degree: 2
+  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
+  Closed date: None
+
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Path 4:
-Path: 263541 -> 266292 -> 266305 -> 287104 -> 269366 -> 269019
+Path 12:
+Path: 287294 -> 266292 -> 287104 -> 269366 -> 276790 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 7
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-10-23 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 266292
+  In-Degree: 2 Out-Degree: 6
+  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 269366
+  In-Degree: 5 Out-Degree: 2
+  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
+  Closed date: None
+
+Node: 276790
+  In-Degree: 4 Out-Degree: 1
+  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 13:
+Path: 287294 -> 266292 -> 287104 -> 276790 -> 269022 -> 269019
 
 Path Details:
 Number of nodes: 6
@@ -157,111 +467,14 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 287104
-  In-Degree: 8 Out-Degree: 3
-  Start date: None  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 5:
-Path: 263541 -> 266292 -> 266305 -> 287104 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 8
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 287104
-  In-Degree: 8 Out-Degree: 3
-  Start date: None  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 276790
-  In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 6:
-Path: 263541 -> 266292 -> 266305 -> 287104 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 7
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
   Closed date: None
 
 Node: 287104
@@ -270,104 +483,22 @@ Node: 287104
   Closed date: None
 
 Node: 276790
-  In-Degree: 5 Out-Degree: 1
+  In-Degree: 4 Out-Degree: 1
   Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
   Closed date: None
 
 Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 7:
-Path: 263541 -> 266292 -> 266309 -> 269366 -> 269019
-
-Path Details:
-Number of nodes: 5
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266309
-  In-Degree: 3 Out-Degree: 1
-  Start date: 2025-10-31 00:00:00  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 8:
-Path: 263541 -> 266292 -> 266309 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 7
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 266309
-  In-Degree: 3 Out-Degree: 1
-  Start date: 2025-10-31 00:00:00  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 276790
   In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
   Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Path 9:
-Path: 263541 -> 266292 -> 269019
+Path 14:
+Path: 287294 -> 266292 -> 269019
 
 Path Details:
 Number of nodes: 3
@@ -377,23 +508,23 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Path 10:
-Path: 263541 -> 266292 -> 276790 -> 269022 -> 269019
+Path 15:
+Path: 287294 -> 266292 -> 266305 -> 287104 -> 269019
 
 Path Details:
 Number of nodes: 5
@@ -403,147 +534,14 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 276790
-  In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 11:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 269366 -> 269019
-
-Path Details:
-Number of nodes: 6
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 12:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 8
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 276790
-  In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 13:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 287104 -> 269019
-
-Path Details:
-Number of nodes: 6
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
   Closed date: None
 
 Node: 266305
@@ -557,114 +555,53 @@ Node: 287104
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 14:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 287104 -> 269366 -> 269019
-
-Path Details:
-Number of nodes: 7
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 287104
-  In-Degree: 8 Out-Degree: 3
-  Start date: None  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 15:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 287104 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 9
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 287104
-  In-Degree: 8 Out-Degree: 3
-  Start date: None  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 276790
-  In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
 Path 16:
-Path: 263541 -> 266292 -> 283450 -> 266305 -> 287104 -> 276790 -> 269022 -> 269019
+Path: 287294 -> 266292 -> 266305 -> 287104 -> 269366 -> 269019
+
+Path Details:
+Number of nodes: 6
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-10-23 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 266292
+  In-Degree: 2 Out-Degree: 6
+  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+  Closed date: None
+
+Node: 266305
+  In-Degree: 3 Out-Degree: 2
+  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 269366
+  In-Degree: 5 Out-Degree: 2
+  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 17:
+Path: 287294 -> 266292 -> 266305 -> 287104 -> 269366 -> 276790 -> 269022 -> 269019
 
 Path Details:
 Number of nodes: 8
@@ -674,19 +611,65 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
   Closed date: None
 
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
+Node: 266305
+  In-Degree: 3 Out-Degree: 2
+  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
+  Closed date: None
+
+Node: 287104
+  In-Degree: 8 Out-Degree: 3
+  Start date: None  Target date: 2026-01-30 00:00:00
+  Closed date: None
+
+Node: 269366
+  In-Degree: 5 Out-Degree: 2
+  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
+  Closed date: None
+
+Node: 276790
+  In-Degree: 4 Out-Degree: 1
+  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
+  Closed date: None
+
+Node: 269022
+  In-Degree: 5 Out-Degree: 1
+  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 18:
+Path: 287294 -> 266292 -> 266305 -> 287104 -> 276790 -> 269022 -> 269019
+
+Path Details:
+Number of nodes: 7
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-10-23 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 266292
+  In-Degree: 2 Out-Degree: 6
+  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
   Closed date: None
 
 Node: 266305
@@ -700,114 +683,58 @@ Node: 287104
   Closed date: None
 
 Node: 276790
-  In-Degree: 5 Out-Degree: 1
+  In-Degree: 4 Out-Degree: 1
   Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
   Closed date: None
 
 Node: 269022
-  In-Degree: 9 Out-Degree: 2
-  Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 17:
-Path: 263541 -> 266292 -> 283450 -> 266309 -> 269366 -> 269019
-
-Path Details:
-Number of nodes: 6
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266309
-  In-Degree: 3 Out-Degree: 1
-  Start date: 2025-10-31 00:00:00  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 18:
-Path: 263541 -> 266292 -> 283450 -> 266309 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 8
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266309
-  In-Degree: 3 Out-Degree: 1
-  Start date: 2025-10-31 00:00:00  Target date: 2026-01-30 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 276790
   In-Degree: 5 Out-Degree: 1
-  Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
-  Closed date: None
-
-Node: 269022
-  In-Degree: 9 Out-Degree: 2
   Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
 Path 19:
-Path: 263541 -> 266292 -> 283450 -> 266500 -> 266305 -> 269366 -> 269019
+Path: 287294 -> 266292 -> 266305 -> 269366 -> 269019
+
+Path Details:
+Number of nodes: 5
+Latest target date: 2026-02-27 00:00:00
+Earliest start date: 2024-10-23 00:00:00
+Latest closed date: None
+
+Node Details:
+
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
+  Closed date: None
+
+Node: 266292
+  In-Degree: 2 Out-Degree: 6
+  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
+  Closed date: None
+
+Node: 266305
+  In-Degree: 3 Out-Degree: 2
+  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
+  Closed date: None
+
+Node: 269366
+  In-Degree: 5 Out-Degree: 2
+  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
+  Closed date: None
+
+Node: 269019
+  In-Degree: 7 Out-Degree: 0
+  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
+  Closed date: None
+
+Path 20:
+Path: 287294 -> 266292 -> 266305 -> 269366 -> 276790 -> 269022 -> 269019
 
 Path Details:
 Number of nodes: 7
@@ -817,24 +744,14 @@ Latest closed date: None
 
 Node Details:
 
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
+Node: 287294
+  In-Degree: 0 Out-Degree: 6
+  Start date: 2025-03-31 17:00:00  Target date: 2025-04-22 00:00:00
   Closed date: None
 
 Node: 266292
-  In-Degree: 6 Out-Degree: 7
+  In-Degree: 2 Out-Degree: 6
   Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266500
-  In-Degree: 6 Out-Degree: 5
-  Start date: 2024-12-04 00:00:00  Target date: 2025-09-19 00:00:00
   Closed date: None
 
 Node: 266305
@@ -843,70 +760,24 @@ Node: 266305
   Closed date: None
 
 Node: 269366
-  In-Degree: 6 Out-Degree: 2
-  Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 269019
-  In-Degree: 8 Out-Degree: 0
-  Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
-  Closed date: None
-
-Path 20:
-Path: 263541 -> 266292 -> 283450 -> 266500 -> 266305 -> 269366 -> 276790 -> 269022 -> 269019
-
-Path Details:
-Number of nodes: 9
-Latest target date: 2026-02-27 00:00:00
-Earliest start date: 2024-10-23 00:00:00
-Latest closed date: None
-
-Node Details:
-
-Node: 263541
-  In-Degree: 0 Out-Degree: 4
-  Start date: 2025-05-26 10:28:00  Target date: 2025-06-13 00:00:00
-  Closed date: None
-
-Node: 266292
-  In-Degree: 6 Out-Degree: 7
-  Start date: 2024-10-23 00:00:00  Target date: 2025-07-31 00:00:00
-  Closed date: None
-
-Node: 283450
-  In-Degree: 3 Out-Degree: 6
-  Start date: 2025-07-01 00:00:00  Target date: 2025-08-31 00:00:00
-  Closed date: None
-
-Node: 266500
-  In-Degree: 6 Out-Degree: 5
-  Start date: 2024-12-04 00:00:00  Target date: 2025-09-19 00:00:00
-  Closed date: None
-
-Node: 266305
-  In-Degree: 3 Out-Degree: 2
-  Start date: 2025-01-27 00:00:00  Target date: 2025-10-17 00:00:00
-  Closed date: None
-
-Node: 269366
-  In-Degree: 6 Out-Degree: 2
+  In-Degree: 5 Out-Degree: 2
   Start date: 2024-10-23 00:00:00  Target date: 2025-08-31 00:00:00
   Closed date: None
 
 Node: 276790
-  In-Degree: 5 Out-Degree: 1
+  In-Degree: 4 Out-Degree: 1
   Start date: 2025-11-03 00:00:00  Target date: 2026-02-06 00:00:00
   Closed date: None
 
 Node: 269022
-  In-Degree: 9 Out-Degree: 2
+  In-Degree: 5 Out-Degree: 1
   Start date: 2024-12-08 00:00:00  Target date: 2025-09-05 00:00:00
   Closed date: None
 
 Node: 269019
-  In-Degree: 8 Out-Degree: 0
+  In-Degree: 7 Out-Degree: 0
   Start date: 2025-04-07 00:00:00  Target date: 2026-02-27 00:00:00
   Closed date: None
 
-Full DAG visualization saved to: /home/scott/Working/dag-paths/output/full_dag.png
-Highlighted DAG visualization saved to: /home/scott/Working/dag-paths/output/highlighted_dag.png
+Full DAG visualization saved to: /Users/s.hendrickson/Working/dag-paths/output/full_dag.png
+Highlighted DAG visualization saved to: /Users/s.hendrickson/Working/dag-paths/output/highlighted_dag.png
