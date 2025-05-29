@@ -15,6 +15,8 @@ from dags import (
     get_data_file_path,
     create_dag,
     find_paths_with_dates,
+    find_sorted_paths,
+    analyze_path_timing,
     analyze_network,
     plot_dag
 )
@@ -69,10 +71,43 @@ def print_path_info(path_info, temporal_data):
     for node in path_info.nodes:
         print(f"\nNode: {node}")
         if node in temporal_data:
-            print(f"  In-Degree: {temporal_data[node].in_degree} Out-Degree: {temporal_data[node].out_degree}")
+            print(f"  # Predecessors: {temporal_data[node].in_degree} # Successors: {temporal_data[node].out_degree}")
             print(f"  Start date: {temporal_data[node].start_date}", 
                   f" Target date: {temporal_data[node].target_date}")
             print(f"  Closed date: {temporal_data[node].closed_date}")
+
+def print_timing_inconsistencies(sorted_paths, temporal_data):
+
+    # Analyze timing inconsistencies
+    timing_issues = analyze_path_timing(sorted_paths, temporal_data)
+    
+    # Print timing issues in a structured format
+    print("\nTiming Analysis Results:")
+    print("=" * 50)
+    
+    for issue_type, issues in timing_issues.items():
+        if issues:
+            print(f"\n{issue_type.replace('_', ' ').title()}:")
+            print("-" * 30)
+            for issue in issues:
+                if issue_type in ['missing_start_dates', 'missing_target_dates']:
+                    print(f"  Node: {issue['node']}")
+                    print(f"  Path: {' -> '.join(issue['path'])}")
+                elif issue_type == 'target_passed_without_close':
+                    print(f"  Node: {issue['node']}")
+                    print(f"  Target Date: {issue['target_date']}")
+                    print(f"  Path: {' -> '.join(issue['path'])}")
+                elif issue_type in ['end_before_predecessor_end', 'start_before_predecessor_end']:
+                    print(f"  Node: {issue['node']}")
+                    print(f"  Predecessor: {issue['predecessor']}")
+                    print(f"  Node Date: {issue.get('node_date') or issue.get('start_date')}")
+                    print(f"  Predecessor Date: {issue['predecessor_date']}")
+                    print(f"  Path: {' -> '.join(issue['path'])}")
+                print()
+    
+    if not any(timing_issues.values()):
+        print("No timing issues found!")
+    
 
 def main():
     # Setup logging
@@ -108,15 +143,20 @@ def main():
         print(f"  {state}: {count}")
     
     # Find paths with latest target dates
+    paths = find_paths_with_dates(G, temporal_data)
+    
     max_paths = 20
-    paths = find_paths_with_dates(G, temporal_data, max_paths=max_paths)
+    selected_sorted_paths = find_sorted_paths(paths, max_paths=max_paths)
     
     # Print path information
     print(f"\nTop {max_paths} Paths by Target Date:")
-    for i, path_info in enumerate(paths, 1):
+    for i, path_info in enumerate(selected_sorted_paths, 1):
         print(f"\nPath {i}:")
         print(f"Path: {' -> '.join(path_info.nodes)}")
         print_path_info(path_info, temporal_data)
+    
+    # Call analyze_path_timing with the sorted paths and temporal data
+    print_timing_inconsistencies(paths, temporal_data)
     
     # Create output directory for visualizations
     output_dir = project_root / 'output'
@@ -132,6 +172,8 @@ def main():
         highlighted_dag_path = output_dir / 'highlighted_dag.png'
         plot_dag(G, highlighted_dag_path, highlight_paths=[p.nodes for p in paths])
         print(f"Highlighted DAG visualization saved to: {highlighted_dag_path}")
+
+   
 
 if __name__ == '__main__':
     main() 

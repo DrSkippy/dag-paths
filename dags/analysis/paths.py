@@ -101,7 +101,7 @@ def plot_dag(G: nx.DiGraph, output_path: Path, highlight_paths: List[List[str]] 
         logger.error(f"Failed to create DAG visualization: {e}")
         raise
 
-def find_paths_with_dates(G: nx.DiGraph, temporal_data: Dict[str, Any], max_paths: int = 20) -> List[PathInfo]:
+def find_paths_with_dates(G: nx.DiGraph, temporal_data: Dict[str, Any]) -> List[PathInfo]:
     """Find paths in the DAG and sort them by target date.
     
     Args:
@@ -112,7 +112,7 @@ def find_paths_with_dates(G: nx.DiGraph, temporal_data: Dict[str, Any], max_path
     Returns:
         List[PathInfo]: List of paths sorted by target date (latest first)
     """
-    logger.info(f"Finding paths with dates (max {max_paths} paths)")
+    logger.info(f"Finding paths with dates")
     all_paths = []
     
     # Find all paths between all pairs of nodes
@@ -162,7 +162,10 @@ def find_paths_with_dates(G: nx.DiGraph, temporal_data: Dict[str, Any], max_path
             start_date=earliest_start,
             closed_date=latest_closed
         ))
-    
+    return path_infos
+
+
+def find_sorted_paths(path_infos, max_paths: int = 20) -> List[PathInfo]:
     # Sort paths by target date (latest first) and take top max_paths
     sorted_paths = sorted(
         path_infos,
@@ -172,8 +175,8 @@ def find_paths_with_dates(G: nx.DiGraph, temporal_data: Dict[str, Any], max_path
     
     logger.info(f"Found {len(sorted_paths)} paths with target dates")
     logger.info(f"Returning {max_paths} paths")
-
     return sorted_paths[:max_paths]
+
 
 def analyze_network(G: nx.DiGraph) -> Dict[str, Any]:
     """Perform basic network analysis on the DAG.
@@ -209,3 +212,88 @@ def analyze_network(G: nx.DiGraph) -> Dict[str, Any]:
     logger.debug(f"Node states: {metrics['node_states']}")
     
     return metrics 
+
+def analyze_path_timing(path_infos: List[PathInfo], temporal_data: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
+    """Analyze paths for timing issues and inconsistencies.
+    
+    Args:
+        path_infos (List[PathInfo]): List of paths to analyze
+        G (nx.DiGraph): NetworkX directed graph
+        temporal_data (Dict[str, Any]): Dictionary mapping node IDs to temporal information
+        
+    Returns:
+        Dict[str, List[Dict[str, Any]]]: Dictionary containing lists of issues found, categorized by type
+    """
+    logger.info("Analyzing paths for timing issues")
+    today = datetime.now()
+    
+    issues = {
+        'missing_start_dates': [],
+        'missing_target_dates': [],
+        'target_passed_without_close': [],
+        'end_before_predecessor_end': [],
+        'start_before_predecessor_end': []
+    }
+    
+    for path_info in path_infos:
+        for i, node in enumerate(path_info.nodes):
+            node_data = temporal_data.get(node)
+            if not node_data:
+                continue
+                
+            # Check for missing start dates
+            if not node_data.start_date:
+                issues['missing_start_dates'].append({
+                    'node': node,
+                    'path': path_info.nodes
+                })
+            
+            # Check for missing complete dates
+            if not node_data.closed_date:
+                issues['missing_target_dates'].append({
+                    'node': node,
+                    'path': path_info.nodes
+                })
+            
+            # Check for completed nodes without close dates
+            if node_data.target_date and node_data.target_date < today and not node_data.closed_date:
+                issues['target_passed_without_close'].append({
+                    'node': node,
+                    'target_date': node_data.target_date,
+                    'path': path_info.nodes
+                })
+            
+            # Check predecessor timing issues
+            if i > 0:  # Skip first node as it has no predecessors
+                pred_node = path_info.nodes[i-1]
+                pred_data = temporal_data.get(pred_node)
+                
+                if pred_data:
+                    # Check if node ends before predecessor
+                    if (node_data.target_date and pred_data.target_date and 
+                        node_data.target_date < pred_data.target_date):
+                        issues['end_before_predecessor_end'].append({
+                            'node': node,
+                            'predecessor': pred_node,
+                            'node_date': node_data.target_date,
+                            'predecessor_date': pred_data.target_date,
+                            'path': path_info.nodes
+                        })
+                    
+                    # Check if node starts before predecessor ends
+                    if (node_data.start_date and pred_data.target_date and 
+                        node_data.start_date < pred_data.target_date):
+                        issues['start_before_predecessor_end'].append({
+                            'node': node,
+                            'predecessor': pred_node,
+                            'start_date': node_data.start_date,
+                            'predecessor_date': pred_data.target_date,
+                            'path': path_info.nodes
+                        })
+    
+    # Log summary of issues found
+    for issue_type, issue_list in issues.items():
+        if issue_list:
+            logger.warning(f"Found {len(issue_list)} {issue_type}")
+    
+    return issues 
