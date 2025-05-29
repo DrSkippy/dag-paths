@@ -1,13 +1,22 @@
 #!/usr/bin/env -S poetry run python
-
+import sys
+import os
 import logging
+from pathlib import Path
+from datetime import datetime
+
+# Add the project root to the Python path
+project_root = Path(__file__).parent.parent
+sys.path.append(str(project_root))
+
 from dags import (
     setup_logging,
     read_dag_data,
     get_data_file_path,
     create_dag,
-    find_longest_paths,
+    find_paths_with_dates,
     analyze_network,
+    plot_dag
 )
 
 def print_network_metrics(metrics):
@@ -48,71 +57,81 @@ def print_network_metrics(metrics):
     for node, centrality in sorted_out_centrality:
         print(f"Node {node}: {centrality:.3f}")
 
-def print_temporal_info(path, temporal_data):
-    """Print temporal information for nodes in a path."""
-    print("\nTemporal Information for Path:")
-    print("=" * 50)
-    for node in path:
+def print_path_info(path_info, temporal_data):
+    """Print detailed information about a path."""
+    print("\nPath Details:")
+    print(f"Number of nodes: {len(path_info.nodes)}")
+    print(f"Latest target date: {path_info.target_date}")
+    print(f"Earliest start date: {path_info.start_date}")
+    print(f"Latest closed date: {path_info.closed_date}")
+    
+    print("\nNode Details:")
+    for node in path_info.nodes:
+        print(f"\nNode: {node}")
         if node in temporal_data:
-            print(f"\nNode {node}:")
-            print(f"  {temporal_data[node]}")
-        else:
-            print(f"\nNode {node}: No temporal data available")
+            print(f"  In-Degree: {temporal_data[node].in_degree} Out-Degree: {temporal_data[node].out_degree}")
+            print(f"  Start date: {temporal_data[node].start_date}", 
+                  f" Target date: {temporal_data[node].target_date}")
+            print(f"  Closed date: {temporal_data[node].closed_date}")
 
 def main():
-    # Set up logging
-    logger = setup_logging()
-    logger.info("Starting DAG analysis")
+    # Setup logging
+    setup_logging()
+    logger = logging.getLogger(__name__)
     
-    # Get the data file path
+    # Get data file path
     data_file = get_data_file_path()
-    
     if not data_file.exists():
         logger.error(f"Data file not found: {data_file}")
-        return
+        sys.exit(1)
     
-    try:
-        # Read and process the data
-        data, temporal_data = read_dag_data(data_file)
-        G = create_dag(data)
-        
-        # Perform network analysis
-        metrics = analyze_network(G)
-        print_network_metrics(metrics)
-        
-        # Find longest paths
-        longest_path_by_edges, longest_path_by_nodes = find_longest_paths(G)
-        
-        if longest_path_by_edges:
-            print("\nLongest Path Analysis:")
-            print("=" * 50)
-            print(f"Longest path: {' -> '.join(longest_path_by_edges)}")
-            print(f"Number of edges in longest path: {len(longest_path_by_edges) - 1}")
-            print(f"Number of nodes in longest path: {len(longest_path_by_nodes)}")
-            
-            # Print temporal information for the longest path
-            print_temporal_info(longest_path_by_edges, temporal_data)
-            
-            # Log the same information
-            logger.info("Longest Path Analysis:")
-            logger.info(f"Longest path: {' -> '.join(longest_path_by_edges)}")
-            logger.info(f"Number of edges in longest path: {len(longest_path_by_edges) - 1}")
-            logger.info(f"Number of nodes in longest path: {len(longest_path_by_nodes)}")
-            
-            # Log temporal information
-            logger.info("Temporal information for longest path:")
-            for node in longest_path_by_edges:
-                if node in temporal_data:
-                    logger.info(f"Node {node}: {temporal_data[node]}")
-                else:
-                    logger.info(f"Node {node}: No temporal data available")
-        else:
-            print("\nNo paths found in the DAG")
-            logger.info("No paths found in the DAG")
-            
-    except Exception as e:
-        logger.error(f"Error during analysis: {e}")
-        raise
+    # Read DAG data
+    logger.info(f"Reading DAG data from {data_file}")
+    data, temporal_data = read_dag_data(data_file)
+    
+    # Create DAG
+    G = create_dag(data)
+    
+    # Perform network analysis
+    metrics = analyze_network(G)
+    
+    # Print network metrics
+    print("\nNetwork Analysis:")
+    print(f"Total nodes: {metrics['total_nodes']}")
+    print(f"Total edges: {metrics['total_edges']}")
+    print(f"Is DAG: {metrics['is_dag']}")
+    print("\nNode Types:")
+    for node_type, count in metrics['node_types'].items():
+        print(f"  {node_type}: {count}")
+    print("\nNode States:")
+    for state, count in metrics['node_states'].items():
+        print(f"  {state}: {count}")
+    
+    # Find paths with latest target dates
+    max_paths = 20
+    paths = find_paths_with_dates(G, temporal_data, max_paths=max_paths)
+    
+    # Print path information
+    print(f"\nTop {max_paths} Paths by Target Date:")
+    for i, path_info in enumerate(paths, 1):
+        print(f"\nPath {i}:")
+        print(f"Path: {' -> '.join(path_info.nodes)}")
+        print_path_info(path_info, temporal_data)
+    
+    # Create output directory for visualizations
+    output_dir = project_root / 'output'
+    output_dir.mkdir(exist_ok=True)
+    
+    # Create visualization of the full DAG
+    full_dag_path = output_dir / 'full_dag.png'
+    plot_dag(G, full_dag_path)
+    print(f"\nFull DAG visualization saved to: {full_dag_path}")
+    
+    # Create visualization highlighting the top paths
+    if paths:
+        highlighted_dag_path = output_dir / 'highlighted_dag.png'
+        plot_dag(G, highlighted_dag_path, highlight_paths=[p.nodes for p in paths])
+        print(f"Highlighted DAG visualization saved to: {highlighted_dag_path}")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main() 

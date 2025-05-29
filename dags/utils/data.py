@@ -13,6 +13,8 @@ class NodeTemporalInfo:
         self.start_date = self._parse_date(start_date)
         self.target_date = self._parse_date(target_date)
         self.closed_date = self._parse_date(closed_date)
+        self.in_degree = None
+        self.out_degree = None
     
     def _parse_date(self, date_str: Optional[str]) -> Optional[datetime]:
         """Parse date string to datetime object."""
@@ -27,7 +29,9 @@ class NodeTemporalInfo:
     def __str__(self) -> str:
         return (f"Start: {self.start_date}, "
                 f"Target: {self.target_date}, "
-                f"Closed: {self.closed_date}")
+                f"Closed: {self.closed_date}, "
+                f"In-Degree: {self.in_degree}, "
+                f"Out-Degree: {self.out_degree}")
 
 def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
     """Read DAG data from CSV file.
@@ -107,5 +111,6 @@ def get_data_file_path() -> Path:
         Path: Path to the data file
     """
     path = Path(__file__).parent.parent.parent / 'data' / 'working.csv'
+    #path = Path(__file__).parent.parent.parent / 'data' / 'sample.csv'
     logger.debug(f"Resolved data file path: {path}")
     return path 

@@ -1,101 +1,100 @@
-﻿WORK_ITEM_ID,WORK_ITEM_RELATIONSHIP_ID,WORK_ITEM_RELATIONSHIP_TYPE,WORK_ITEM_TYPE_NAME,WORK_ITEM_RELATIONSHIP_STATE_NAME,START_DATETIME,TARGET_DATETIME,CLOSED_DATETIME
-188671,187203,Successor,User Story,Removed,,,
-188682,187605,Predecessor,Feature,Closed,,,27:19.0
-188690,230634,Predecessor,Feature,Closed,00:00.0,00:00.0,56:29.0
-188737,189415,Successor,User Story,Closed,,,53:23.0
-188737,196733,Successor,User Story,Reviewing,,,
-188738,176630,Predecessor,User Story,Closed,,,11:35.0
-188740,187801,Predecessor,User Story,Closed,,,49:20.0
-188742,177086,Predecessor,User Story,Closed,,,37:21.0
-188742,215882,Predecessor,User Story,Closed,,,57:14.0
-188742,229033,Predecessor,User Story,Removed,,,
-188742,229044,Predecessor,User Story,Closed,,,55:08.0
-188742,229045,Predecessor,User Story,Closed,,,55:30.0
-188745,186845,Predecessor,User Story,Ready,,,
-188776,196789,Successor,User Story,Closed,,,33:29.0
-188789,235990,Successor,User Story,Closed,,,38:07.0
-188789,235996,Predecessor,User Story,Closed,,,30:36.0
-188806,206579,Predecessor,User Story,New,,,
-188909,192281,Successor,User Story,Closed,,,10:40.0
-188935,189169,Successor,User Story,Removed,,,
-188941,189646,Successor,User Story,Closed,,,57:50.0
-188945,188946,Successor,User Story,Closed,,,28:52.0
-188946,188945,Predecessor,User Story,Closed,,,22:00.0
-188976,186934,Predecessor,User Story,Closed,,,29:11.0
-189169,188935,Predecessor,User Story,Removed,,,
-189186,202169,Predecessor,Epic,Closed,00:00.0,00:00.0,27:59.0
-189205,191430,Successor,User Story,Closed,,,59:21.0
-189272,246602,Predecessor,User Story,Closed,,,45:21.0
-189272,247946,Successor,User Story,Closed,,,45:15.0
-189272,250025,Successor,User Story,Closed,,,50:15.0
-189273,221939,Predecessor,User Story,Closed,,,27:48.0
-189273,244570,Successor,User Story,Closed,,,43:01.0
-189274,189280,Predecessor,User Story,Closed,,,02:51.0
-189280,189274,Successor,User Story,Closed,,,49:20.0
-189280,247956,Predecessor,User Story,Closed,,,57:31.0
-189280,253659,Predecessor,User Story,Closed,,,48:51.0
-189280,259046,Successor,User Story,Closed,,,49:34.0
-189280,260498,Predecessor,User Story,Closed,,,27:42.0
-189280,260499,Predecessor,User Story,Closed,,,46:39.0
-189280,260875,Successor,User Story,Closed,,,49:00.0
-189280,263495,Successor,User Story,Closed,,,19:07.0
-189280,266959,Successor,User Story,Closed,,,33:32.0
-189414,177088,Predecessor,User Story,Closed,,,08:00.0
-189414,189812,Predecessor,User Story,Closed,,,44:53.0
-189415,188737,Predecessor,User Story,Closed,,,56:17.0
-189415,201469,Predecessor,User Story,Reviewing,,,
-189415,201491,Predecessor,User Story,New,,,
-189415,204254,Predecessor,User Story,Closed,,,46:11.0
-189415,213581,Predecessor,User Story,Closed,,,12:07.0
-189566,189947,Predecessor,User Story,Removed,,,
-189582,176428,Successor,User Story,Closed,,,25:13.0
-189586,174449,Successor,Feature,Closed,,,26:42.0
-189640,183823,Successor,User Story,Removed,,,
-189646,188941,Predecessor,User Story,Closed,,,55:13.0
-189646,195684,Predecessor,User Story,Closed,,,00:27.0
-189693,183281,Predecessor,User Story,Closed,,,41:15.0
-189704,151665,Successor,User Story,Closed,,,15:59.0
-189704,161932,Predecessor,User Story,Closed,,,51:09.0
-189704,183700,Predecessor,User Story,Closed,,,40:29.0
-189758,186031,Predecessor,User Story,Closed,,,14:23.0
-189758,189760,Successor,User Story,Closed,,,40:03.0
-189758,192796,Successor,User Story,Ready,,,
-189760,189758,Predecessor,User Story,Closed,,,28:59.0
-189760,191716,Predecessor,User Story,Ready,,,
-189812,189414,Successor,User Story,New,,,
-189812,204250,Successor,User Story,New,,,
-189812,206970,Successor,User Story,Closed,,,55:07.0
-189847,174196,Predecessor,User Story,Closed,,,31:34.0
-189847,174760,Predecessor,User Story,Closed,,,33:51.0
-189867,178535,Predecessor,User Story,Closed,,,23:19.0
-189868,183217,Predecessor,User Story,Closed,,,27:40.0
-189896,174997,Predecessor,User Story,Closed,,,32:21.0
-189947,189566,Successor,User Story,Closed,,,54:14.0
-189949,189951,Successor,User Story,Closed,,,02:40.0
-189951,189949,Predecessor,User Story,Closed,,,02:40.0
-189989,191446,Successor,User Story,Closed,,,23:39.0
-189989,193995,Successor,User Story,Closed,,,41:12.0
-190057,174196,Predecessor,User Story,Closed,,,31:34.0
-190057,174753,Successor,User Story,Closed,,,12:40.0
-190063,211459,Predecessor,User Story,Closed,,,15:39.0
-190109,183756,Predecessor,User Story,Closed,,,49:16.0
-190161,176989,Predecessor,User Story,Closed,,,53:30.0
-264636,293240,Predecessor,Decision,Active,,,
-273640,293291,Successor,User Story,New,,,
-281992,292383,Predecessor,Decision,New,,,
-283466,293360,Predecessor,Issue,New,,,
-290801,292384,Successor,User Story,New,,,
-291059,292995,Predecessor,Task,Closed,,,09:18.0
-291059,293147,Predecessor,Task,Closed,,,12:12.0
-291059,292994,Predecessor,Task,Closed,,,14:09.0
-292383,281992,Successor,Feature,Solutioning,00:00.0,00:00.0,
-292384,290801,Predecessor,User Story,Resolved,,,
-292710,293358,Successor,Feature,New,,,
-292801,292892,Successor,User Story,Implementing,,,
-292892,292801,Predecessor,User Story,Implementing,,,
-292994,291059,Successor,Bug,Active,,,
-292995,291059,Successor,Bug,Active,,,
-293147,291059,Successor,Bug,Active,,,
-293240,264636,Successor,Feature,Solutioning,00:00.0,00:00.0,
-293291,273640,Predecessor,User Story,Closed,,,36:38.0
-293358,292710,Predecessor,Feature,QA,00:00.0,12:00.0,
+﻿WORK_ITEM_ID,WORK_ITEM_RELATED_ID,WORK_ITEM_RELATIONSHIP_TYPE,WORK_ITEM_TYPE_NAME,WORK_ITEM_RELATIONSHIP_TITLE_NAME,WORK_ITEM_RELATIONSHIP_STATE_NAME,REPORTING_STATUS_NAME,TSHIRT_SIZE,IMPACT_CATEGORY_NAME,WORK_ITEM_RELATIONSHIP_ISSUE_IND,VALUE_AREA_NAME,START_DATETIME,TARGET_DATETIME,CHANGED_DATETIME,CLOSED_DATETIME,WORK_ITEM_RELATIONSHIP_CREATED_DATETIME,ESTIMATED_START_DATETIME,ESTIMATED_COMPLETION_DATETIME,WORK_ITEM_LINKS_ID,EDE_CREATE_DATETIME,EDE_UPDATE_DATETIME
+283928,294540,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 23:38,,5/27/25 23:38,,,558631220,5/28/25 12:04,5/28/25 12:04
+294618,294493,Successor,Feature,,Reviewing,,,,,Major Initiative,,,5/27/25 22:31,,5/27/25 22:45,,,558629817,5/28/25 12:04,5/28/25 12:04
+294660,290377,Predecessor,Feature,,Planning,,,,,Major Initiative,,,5/27/25 10:49,,5/27/25 10:49,,,558581533,5/28/25 12:04,5/28/25 12:04
+283840,268095,Predecessor,Feature,,QA,Green,,,,Major Initiative,11/4/24 16:00,3/28/25 16:00,5/27/25 10:13,,5/27/25 10:10,,,558577075,5/28/25 12:04,5/28/25 12:04
+268095,283840,Successor,Feature,,Reviewing,Green,,,,Major Initiative,4/23/25 00:00,6/17/25 00:00,5/22/25 08:56,,5/27/25 10:10,,,558577074,5/28/25 12:04,5/28/25 12:04
+290377,294660,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 23:40,,5/27/25 10:49,,,558581532,5/28/25 12:04,5/28/25 12:04
+287145,294624,Successor,Feature,,New,Green,,,,Major Initiative,7/16/25 00:00,7/29/25 23:00,5/27/25 15:31,,5/22/25 17:14,,,558295277,5/28/25 12:04,5/28/25 12:04
+294624,287159,Predecessor,Feature,,Solutioning,Green,,,,Major Initiative,3/26/25 00:00,6/3/25 23:00,5/27/25 13:00,,5/22/25 17:14,,,558295284,5/28/25 12:04,5/28/25 12:04
+294624,283809,Predecessor,Feature,,Dev Complete,,,,,Major Initiative,4/9/25 00:00,4/23/25 00:00,4/25/25 15:30,,5/22/25 17:14,,,558295282,5/28/25 12:04,5/28/25 12:04
+294624,287145,Predecessor,Feature,,Closed,,,,,Major Initiative,3/26/25 00:00,4/9/25 00:00,4/25/25 10:23,4/21/25 09:05,5/22/25 17:14,,,558295283,5/28/25 12:04,5/28/25 12:04
+294624,254983,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,4/16/25 00:00,6/2/25 23:00,5/6/25 10:14,,5/22/25 17:14,,,558295280,5/28/25 12:04,5/28/25 12:04
+283809,294624,Successor,Feature,,New,Green,,,,Major Initiative,7/16/25 00:00,7/29/25 23:00,5/27/25 15:31,,5/22/25 17:14,,,558295276,5/28/25 12:04,5/28/25 12:04
+254983,294624,Successor,Feature,,New,Green,,,,Major Initiative,7/16/25 00:00,7/29/25 23:00,5/27/25 15:31,,5/22/25 17:14,,,558295274,5/28/25 12:04,5/28/25 12:04
+285528,287269,Predecessor,Feature,,Reviewing,,,,,Major Initiative,10/9/24 00:00,6/29/25 23:00,5/16/25 13:55,,5/22/25 14:26,,,558286200,5/28/25 12:04,5/28/25 12:04
+291985,289158,Successor,Feature,,Implementing,Yellow,,,,Major Initiative,4/22/25 00:00,6/20/25 00:00,5/22/25 09:43,,5/22/25 09:39,,,558251803,5/28/25 12:04,5/28/25 12:04
+294215,294540,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 23:38,,5/22/25 09:56,,,558253648,5/28/25 12:04,5/28/25 12:04
+292522,294495,Successor,Feature,,Reviewing,,,,,Major Initiative,,,5/22/25 05:20,,5/22/25 04:13,,,558199001,5/28/25 12:04,5/28/25 12:04
+294494,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:13,,,558198981,5/28/25 12:04,5/28/25 12:04
+294497,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:18,,,558199199,5/28/25 12:04,5/28/25 12:04
+294493,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:12,,,558198662,5/28/25 12:04,5/28/25 12:04
+292522,294492,Successor,Feature,,Reviewing,,,,,Major Initiative,,,5/27/25 22:27,,5/22/25 04:12,,,558198618,5/28/25 12:04,5/28/25 12:04
+292522,294498,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 22:42,,5/22/25 04:18,,,558199743,5/28/25 12:04,5/28/25 12:04
+294495,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:13,,,558199006,5/28/25 12:04,5/28/25 12:04
+292522,294497,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 22:40,,5/22/25 04:18,,,558199193,5/28/25 12:04,5/28/25 12:04
+292522,294493,Successor,Feature,,Reviewing,,,,,Major Initiative,,,5/27/25 22:31,,5/22/25 04:12,,,558198659,5/28/25 12:04,5/28/25 12:04
+292522,294499,Successor,Feature,,New,,,,,Major Initiative,,,5/27/25 22:44,,5/22/25 04:19,,,558199789,5/28/25 12:04,5/28/25 12:04
+292522,294494,Successor,Feature,,Reviewing,,,,,Major Initiative,,,5/27/25 22:24,,5/22/25 04:13,,,558198977,5/28/25 12:04,5/28/25 12:04
+294499,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:19,,,558199797,5/28/25 12:04,5/28/25 12:04
+294498,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:18,,,558199750,5/28/25 12:04,5/28/25 12:04
+294500,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:21,,,558199954,5/28/25 12:04,5/28/25 12:04
+292522,294500,Successor,Feature,,New,,,,,Major Initiative,,,5/22/25 05:20,,5/22/25 04:21,,,558199945,5/28/25 12:04,5/28/25 12:04
+294492,292522,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/2/25 13:43,5/28/25 00:00,5/22/25 10:23,,5/22/25 04:12,,,558198619,5/28/25 12:04,5/28/25 12:04
+284222,277868,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,3/20/25 00:00,7/15/25 17:00,5/22/25 02:48,,5/22/25 02:58,,,558194003,5/28/25 12:04,5/28/25 12:04
+284168,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194165,5/28/25 12:04,5/28/25 12:04
+284169,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194166,5/28/25 12:04,5/28/25 12:04
+277868,284222,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 02:58,,,558194002,5/28/25 12:04,5/28/25 12:04
+284222,284169,Predecessor,Feature,,New,,,,,Major Initiative,8/27/25 00:00,10/10/25 00:00,5/22/25 02:59,,5/22/25 02:59,,,558194027,5/28/25 12:04,5/28/25 12:04
+294480,277868,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,3/20/25 00:00,7/15/25 17:00,5/22/25 02:48,,5/22/25 03:01,,,558194173,5/28/25 12:04,5/28/25 12:04
+284222,284168,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/21/25 11:01,9/9/25 00:00,5/22/25 02:49,,5/22/25 02:59,,,558194021,5/28/25 12:04,5/28/25 12:04
+254621,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194160,5/28/25 12:04,5/28/25 12:04
+294480,268094,Predecessor,Feature,,Solutioning,Green,,,,Major Initiative,5/21/25 16:00,7/1/25 17:00,5/15/25 07:20,,5/22/25 03:01,,,558194172,5/28/25 12:04,5/28/25 12:04
+277868,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194163,5/28/25 12:04,5/28/25 12:04
+286553,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194168,5/28/25 12:04,5/28/25 12:04
+284169,284222,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 02:59,,,558194026,5/28/25 12:04,5/28/25 12:04
+284168,284222,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 02:59,,,558194020,5/28/25 12:04,5/28/25 12:04
+294480,254621,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,9/16/24 00:00,6/3/25 00:00,5/22/25 02:48,,5/22/25 03:01,,,558194170,5/28/25 12:04,5/28/25 12:04
+281290,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194164,5/28/25 12:04,5/28/25 12:04
+294480,284169,Predecessor,Feature,,New,,,,,Major Initiative,8/27/25 00:00,10/10/25 00:00,5/22/25 02:59,,5/22/25 03:01,,,558194176,5/28/25 12:04,5/28/25 12:04
+294480,281290,Predecessor,Feature,,New,,,,,Major Initiative,7/16/25 00:00,8/12/25 00:00,5/20/25 17:53,,5/22/25 03:01,,,558194174,5/28/25 12:04,5/28/25 12:04
+268094,294480,Successor,Feature,,New,,,,,Major Initiative,10/8/25 00:00,12/31/25 00:00,5/22/25 04:06,,5/22/25 03:01,,,558194162,5/28/25 12:04,5/28/25 12:04
+294480,284168,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/21/25 11:01,9/9/25 00:00,5/22/25 02:49,,5/22/25 03:01,,,558194175,5/28/25 12:04,5/28/25 12:04
+294066,249317,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,6/19/24 00:00,7/1/25 23:00,5/27/25 08:20,,5/21/25 12:38,,,558157839,5/28/25 12:04,5/28/25 12:04
+291950,286922,Successor,Feature,,Solutioning,Red,,,,Major Initiative,4/23/25 00:00,5/12/25 23:00,5/28/25 09:42,,5/19/25 08:14,,,557904869,5/28/25 12:04,5/28/25 12:04
+293652,276588,Successor,Feature,,Implementing,Green,,,,Major Initiative,1/6/25 00:00,6/15/25 00:00,5/16/25 07:12,,5/16/25 14:57,,,557840827,5/28/25 12:04,5/28/25 12:04
+293652,254984,Successor,Feature,,Dev Complete,,,,,Major Initiative,7/31/24 00:00,12/3/24 00:00,5/7/25 10:33,,5/16/25 14:57,,,557840826,5/28/25 12:04,5/28/25 12:04
+273026,286229,Predecessor,Feature,,Reviewing,,,,,Major Initiative,5/4/25 17:00,,5/20/25 17:35,,5/15/25 21:03,,,557756304,5/28/25 12:04,5/28/25 12:04
+293360,283466,Successor,Feature,,Solutioning,Green,,Management,,Major Initiative,4/8/25 00:00,5/30/25 12:00,5/23/25 14:45,,5/14/25 09:38,,,557588531,5/28/25 12:04,5/28/25 12:04
+222897,141977,Successor,Feature,,Implementing,Green,,,,Major Initiative,9/1/23 00:00,5/20/25 16:00,5/15/25 07:42,,5/13/25 09:53,,,557486305,5/28/25 12:04,5/28/25 12:04
+240016,293213,Predecessor,Feature,,New,,,,,Major Initiative,,,5/13/25 08:15,,5/13/25 08:15,,,557473812,5/28/25 12:04,5/28/25 12:04
+283390,286945,Successor,Feature,,Implementing,,,,,Major Initiative,6/9/25 00:00,7/1/25 00:00,5/27/25 09:36,,5/11/25 23:18,,,557311190,5/28/25 12:04,5/28/25 12:04
+286945,283390,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,4/1/25 00:00,7/1/25 00:00,5/18/25 16:34,,5/11/25 23:18,,,557311191,5/28/25 12:04,5/28/25 12:04
+287135,293104,Successor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198654,5/28/25 12:04,5/28/25 12:04
+293104,287135,Predecessor,Feature,,Solutioning,Green,,,,Major Initiative,4/30/25 00:00,6/10/25 23:00,5/27/25 12:59,,5/8/25 14:45,,,557198670,5/28/25 12:04,5/28/25 12:04
+283820,293104,Predecessor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198650,5/28/25 12:04,5/28/25 12:04
+283826,293104,Successor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198651,5/28/25 12:04,5/28/25 12:04
+287141,293104,Predecessor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198655,5/28/25 12:04,5/28/25 12:04
+293104,283820,Successor,Feature,,Implementing,Green,,,,Major Initiative,5/28/25 00:00,7/7/25 23:00,5/5/25 14:21,,5/8/25 14:45,,,557198666,5/28/25 12:04,5/28/25 12:04
+293104,287040,Predecessor,Feature,,Solutioning,Green,,,,Major Initiative,4/9/25 00:00,5/30/25 00:00,5/23/25 05:30,,5/8/25 14:45,,,557198668,5/28/25 12:04,5/28/25 12:04
+293104,287141,Successor,Feature,,Solutioning,Green,,,,Major Initiative,3/26/25 00:00,6/10/25 23:00,5/27/25 15:14,,5/8/25 14:45,,,557198672,5/28/25 12:04,5/28/25 12:04
+293223,283502,Successor,Feature,,Reviewing,,,,,Major Initiative,5/27/25 21:59,9/23/25 00:00,5/27/25 22:59,,5/13/25 08:30,,,557476983,5/28/25 12:04,5/28/25 12:04
+291815,276811,Successor,Feature,,Closed,Yellow,,,,Major Initiative,3/26/25 00:00,6/3/25 23:00,5/27/25 12:59,5/27/25 12:55,5/8/25 09:12,,,557157519,5/28/25 12:04,5/28/25 12:04
+292947,276811,Predecessor,Feature,,Closed,Yellow,,,,Major Initiative,3/26/25 00:00,6/3/25 23:00,5/27/25 12:59,5/27/25 12:55,5/8/25 08:53,,,557154649,5/28/25 12:04,5/28/25 12:04
+292890,292947,Successor,Feature,,New,,,,,Major Initiative,6/4/25 00:00,7/2/25 00:00,5/22/25 14:49,,5/8/25 08:53,,,557154712,5/28/25 12:04,5/28/25 12:04
+276811,292947,Successor,Feature,,New,,,,,Major Initiative,6/4/25 00:00,7/2/25 00:00,5/22/25 14:49,,5/8/25 08:53,,,557154648,5/28/25 12:04,5/28/25 12:04
+293104,283826,Predecessor,Feature,,New,Green,,,,Major Initiative,5/28/25 00:00,7/7/25 23:00,5/5/25 14:21,,5/8/25 14:45,,,557198667,5/28/25 12:04,5/28/25 12:04
+261061,293104,Predecessor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198645,5/28/25 12:04,5/28/25 12:04
+287040,293104,Successor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198652,5/28/25 12:04,5/28/25 12:04
+292970,293104,Predecessor,Feature,,UAT,Green,,,,Major Initiative,5/13/25 14:38,6/3/25 00:00,5/21/25 15:52,,5/8/25 14:45,,,557198657,5/28/25 12:04,5/28/25 12:04
+293104,261061,Successor,Feature,,Reviewing,Green,,,,Major Initiative,7/16/25 00:00,7/1/25 00:00,5/20/25 12:57,,5/8/25 14:45,,,557198661,5/28/25 12:04,5/28/25 12:04
+265564,291949,Predecessor,Feature,,New,Green,,,,Major Initiative,3/26/25 00:00,6/17/25 23:00,5/8/25 13:10,,5/7/25 15:42,,,557073738,5/28/25 12:04,5/28/25 12:04
+282000,284325,Successor,Feature,,Reviewing,Green,,,,Major Initiative,4/23/25 00:00,6/30/25 00:00,5/14/25 15:19,,5/7/25 15:44,,,557073952,5/28/25 12:04,5/28/25 12:04
+291949,265204,Successor,Feature,,Implementing,Green,,,,Major Initiative,4/23/25 00:00,6/3/25 00:00,5/6/25 13:15,,5/7/25 15:38,,,557073521,5/28/25 12:04,5/28/25 12:04
+265562,291949,Predecessor,Feature,,New,Green,,,,Major Initiative,3/26/25 00:00,6/17/25 23:00,5/8/25 13:10,,5/7/25 15:41,,,557073637,5/28/25 12:04,5/28/25 12:04
+292939,286925,Successor,Feature,,Closed,Green,,,,Major Initiative,3/26/25 11:07,5/26/25 23:00,5/27/25 15:04,5/27/25 15:04,5/7/25 13:11,,,557060433,5/28/25 12:04,5/28/25 12:04
+292944,253863,Successor,Feature,,Dev Complete,,,,,Major Initiative,8/14/24 00:00,9/24/24 00:00,5/14/25 09:45,,5/7/25 13:22,,,557061685,5/28/25 12:04,5/28/25 12:04
+292945,253863,Successor,Feature,,Dev Complete,,,,,Major Initiative,8/14/24 00:00,9/24/24 00:00,5/14/25 09:45,,5/7/25 13:23,,,557061895,5/28/25 12:04,5/28/25 12:04
+292943,284015,Successor,Feature,,Implementing,Green,,,,Major Initiative,4/23/25 00:00,6/9/25 23:00,5/14/25 09:30,,5/7/25 13:21,,,557061505,5/28/25 12:04,5/28/25 12:04
+292938,286894,Successor,Feature,,Closed,Green,,,,Major Initiative,3/26/25 20:25,5/5/25 23:00,5/14/25 09:30,5/8/25 21:33,5/7/25 13:09,,,557060249,5/28/25 12:04,5/28/25 12:04
+292946,253330,Successor,Feature,,Dev Complete,,,,,Major Initiative,6/10/24 00:00,8/27/24 00:00,5/14/25 09:27,,5/7/25 13:25,,,557062067,5/28/25 12:04,5/28/25 12:04
+287159,294624,Successor,Feature,,New,Green,,,,Major Initiative,7/16/25 00:00,7/29/25 23:00,5/27/25 15:31,,5/22/25 17:14,,,558295278,5/28/25 12:04,5/28/25 12:04
+277934,277867,Predecessor,Feature,,New,Green,,,,Major Initiative,7/16/25 22:00,8/13/25 17:00,5/15/25 07:42,,5/7/25 08:50,,,557030612,5/28/25 12:04,5/28/25 12:04
+277934,277868,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,3/20/25 00:00,7/15/25 17:00,5/22/25 02:48,,5/7/25 08:50,,,557030613,5/28/25 12:04,5/28/25 12:04
+271148,277934,Successor,Feature,,Implementing,Green,,,,Major Initiative,5/7/25 12:05,6/17/25 17:00,5/27/25 23:15,,5/7/25 08:50,,,557030607,5/28/25 12:04,5/28/25 12:04
+277934,254621,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,9/16/24 00:00,6/3/25 00:00,5/22/25 02:48,,5/7/25 08:50,,,557030610,5/28/25 12:04,5/28/25 12:04
+277868,277934,Successor,Feature,,Implementing,Green,,,,Major Initiative,5/7/25 12:05,6/17/25 17:00,5/27/25 23:15,,5/7/25 08:50,,,557030609,5/28/25 12:04,5/28/25 12:04
+254621,277934,Successor,Feature,,Implementing,Green,,,,Major Initiative,5/7/25 12:05,6/17/25 17:00,5/27/25 23:15,,5/7/25 08:50,,,557030606,5/28/25 12:04,5/28/25 12:04
+277867,277934,Successor,Feature,,Implementing,Green,,,,Major Initiative,5/7/25 12:05,6/17/25 17:00,5/27/25 23:15,,5/7/25 08:50,,,557030608,5/28/25 12:04,5/28/25 12:04
+277934,271148,Predecessor,Feature,,Implementing,Green,,,,Major Initiative,5/21/25 22:00,7/15/25 01:00,5/13/25 08:56,,5/7/25 08:50,,,557030611,5/28/25 12:04,5/28/25 12:04
+292942,276811,Successor,Feature,,Closed,Yellow,,,,Major Initiative,3/26/25 00:00,6/3/25 23:00,5/27/25 12:59,5/27/25 12:55,5/7/25 13:14,,,557060693,5/28/25 12:04,5/28/25 12:04

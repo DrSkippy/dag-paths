@@ -33,9 +33,9 @@ def setup_logging(log_name='dag_analysis'):
     logger.addHandler(handler)
     
     # Configure module loggers
-    for module in ['dags.utils.data', 'dags.analysis.paths']:
-        module_logger = logging.getLogger(module)
-        module_logger.setLevel(logging.INFO)
-        module_logger.addHandler(handler)
+    #for module in ['dags.utils.data', 'dags.analysis.paths']:
+    #    module_logger = logging.getLogger(module)
+    #    module_logger.setLevel(logging.INFO)
+    #    module_logger.addHandler(handler)
     
     return logger 
