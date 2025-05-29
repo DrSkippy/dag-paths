@@ -59,9 +59,10 @@ def plot_dag(G: nx.DiGraph, output_path: Path, highlight_paths: List[List[str]] 
     # Add nodes
     for node, attrs in G.nodes(data=True):
         # Create node label with type and state
-        node_type = attrs.get('type', 'Unknown')
-        node_state = attrs.get('state', 'Unknown')
-        label = f"{node}\n{node_type}\n{node_state}"
+        #node_type = attrs.get('type', 'Unknown')
+        #node_state = attrs.get('state', 'Unknown')
+        #label = f"{node}\n{node_type}\n{node_state}"
+        label = f"{node}"
         
         # Create node with attributes
         pydot_node = pydot.Node(
@@ -89,7 +90,7 @@ def plot_dag(G: nx.DiGraph, output_path: Path, highlight_paths: List[List[str]] 
     try:
         # Set graph attributes for high resolution
         dot.set('dpi', '1200')
-        dot.set('size', '60, 3')  # Not intended to print!
+        dot.set('size', '60, 6')  # Not intended to print!
         dot.set('ratio', 'fill')
         dot.set('concentrate', 'true')  # Merge edges between same nodes
         
