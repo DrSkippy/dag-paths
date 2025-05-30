@@ -227,43 +227,56 @@ def analyze_path_timing(path_infos: List[PathInfo], temporal_data: Dict[str, Any
     logger.info("Analyzing paths for timing issues")
     today = datetime.now()
     
-    issues = {
-        'missing_start_dates': [],
-        'missing_target_dates': [],
-        'target_passed_without_close': [],
-        'end_before_predecessor_end': [],
-        'start_before_predecessor_end': []
-    }
-    
+    issues = {}
+
     for path_info in path_infos:
         for i, node in enumerate(path_info.nodes):
             node_data = temporal_data.get(node)
             if not node_data:
                 continue
+
+            if node not in issues: 
+                # Frist time we've seen this node
+                issues[node] = {
+                    'missing_start_dates': None,
+                    'missing_target_dates': None,
+                    'target_passed_without_close': None,
+                    'end_before_predecessor_end': [],
+                    'start_before_predecessor_end': []
+                }
+
+                # Check for missing start dates
+                if not node_data.start_date:
+                    issues[node]['missing_start_dates'] = {
+                        'node': node,
+                        'path': path_info.nodes,
+                        'target_date': node_data.target_date,
+                        'start_date': node_data.start_date,
+                        'closed_date': node_data.closed_date
+                    }
                 
-            # Check for missing start dates
-            if not node_data.start_date:
-                issues['missing_start_dates'].append({
-                    'node': node,
-                    'path': path_info.nodes
-                })
-            
-            # Check for missing complete dates
-            if not node_data.closed_date:
-                issues['missing_target_dates'].append({
-                    'node': node,
-                    'path': path_info.nodes
-                })
-            
-            # Check for completed nodes without close dates
-            if node_data.target_date and node_data.target_date < today and not node_data.closed_date:
-                issues['target_passed_without_close'].append({
-                    'node': node,
-                    'target_date': node_data.target_date,
-                    'path': path_info.nodes
-                })
-            
+                # Check for missing complete dates
+                if not node_data.target_date:
+                    issues[node]['missing_target_dates'] = {
+                        'node': node,
+                        'path': path_info.nodes,
+                        'target_date': node_data.target_date,
+                        'start_date': node_data.start_date,
+                        'closed_date': node_data.closed_date
+                    }
+                
+                # Check for completed nodes without close dates
+                if node_data.target_date and node_data.target_date < today and not node_data.closed_date:
+                    issues[node]['target_passed_without_close'] = {
+                        'node': node,
+                        'target_date': node_data.target_date,
+                        'start_date': node_data.start_date,
+                        'closed_date': node_data.closed_date,
+                        'path': path_info.nodes
+                    }
+            # The same can play a role in multiple paths, so process each path
             # Check predecessor timing issues
+            # On the path including target node
             if i > 0:  # Skip first node as it has no predecessors
                 pred_node = path_info.nodes[i-1]
                 pred_data = temporal_data.get(pred_node)
@@ -272,7 +285,7 @@ def analyze_path_timing(path_infos: List[PathInfo], temporal_data: Dict[str, Any
                     # Check if node ends before predecessor
                     if (node_data.target_date and pred_data.target_date and 
                         node_data.target_date < pred_data.target_date):
-                        issues['end_before_predecessor_end'].append({
+                        issues[node]['end_before_predecessor_end'].append({
                             'node': node,
                             'predecessor': pred_node,
                             'node_date': node_data.target_date,
@@ -283,7 +296,7 @@ def analyze_path_timing(path_infos: List[PathInfo], temporal_data: Dict[str, Any
                     # Check if node starts before predecessor ends
                     if (node_data.start_date and pred_data.target_date and 
                         node_data.start_date < pred_data.target_date):
-                        issues['start_before_predecessor_end'].append({
+                        issues[node]['start_before_predecessor_end'].append({
                             'node': node,
                             'predecessor': pred_node,
                             'start_date': node_data.start_date,

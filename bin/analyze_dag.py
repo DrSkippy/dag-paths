@@ -84,26 +84,28 @@ def print_timing_inconsistencies(sorted_paths, temporal_data):
     # Print timing issues in a structured format
     print("\nTiming Analysis Results:")
     print("=" * 50)
-    
-    for issue_type, issues in timing_issues.items():
-        if issues:
-            print(f"\n{issue_type.replace('_', ' ').title()}:")
-            print("-" * 30)
-            for issue in issues:
-                if issue_type in ['missing_start_dates', 'missing_target_dates']:
-                    print(f"  Node: {issue['node']}")
-                    print(f"  Path: {' -> '.join(issue['path'])}")
-                elif issue_type == 'target_passed_without_close':
-                    print(f"  Node: {issue['node']}")
-                    print(f"  Target Date: {issue['target_date']}")
-                    print(f"  Path: {' -> '.join(issue['path'])}")
+    for node in timing_issues:
+        print(f"Issues for Node: {node}")
+        print("-" * 40)
+        found_issues = False
+        for issue_type, issues in timing_issues[node].items():
+            if issues:
+                found_issues = True
+                print(f"{issue_type.replace('_', ' ').title()}:")
+                logging.info(f"{issue_type} = {issues}")
+                if issue_type in ['missing_start_dates', 'missing_target_dates', 'target_passed_without_close']:
+                    print(f"  Target Date: {issues['target_date']}")
+                    print(f"  Start Date: {issues['start_date']}")
+                    print(f"  Closed Date: {issues['closed_date']}")
                 elif issue_type in ['end_before_predecessor_end', 'start_before_predecessor_end']:
-                    print(f"  Node: {issue['node']}")
-                    print(f"  Predecessor: {issue['predecessor']}")
-                    print(f"  Node Date: {issue.get('node_date') or issue.get('start_date')}")
-                    print(f"  Predecessor Date: {issue['predecessor_date']}")
-                    print(f"  Path: {' -> '.join(issue['path'])}")
-                print()
+                    for issue in issues:
+                        print(f"  Path: {' -> '.join(issue['path'])}")
+                        print(f"    Predecessor: {issue['predecessor']}")
+                        print(f"    Node Date: {issue.get('node_date') or issue.get('start_date')}")
+                        print(f"    Predecessor Date: {issue['predecessor_date']}")
+        if not found_issues:
+            print("(No Issues)")
+        print()
     
     if not any(timing_issues.values()):
         print("No timing issues found!")
