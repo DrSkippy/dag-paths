@@ -69,7 +69,7 @@ def print_path_info(path_info, temporal_data):
     
     print("\nNode Details:")
     for node in path_info.nodes:
-        print(f"\nNode: {node}")
+        print(f"\nNode: {node} [Opportunity: {temporal_data[node].opportunity}]")
         if node in temporal_data:
             print(f"  # Predecessors: {temporal_data[node].in_degree} # Successors: {temporal_data[node].out_degree}")
             print(f"  Start date: {temporal_data[node].start_date}", 
@@ -85,7 +85,7 @@ def print_timing_inconsistencies(sorted_paths, temporal_data):
     print("\nTiming Analysis Results:")
     print("=" * 50)
     for node in timing_issues:
-        print(f"Issues for Node: {node}")
+        print(f"Issues for Node: {node} [Opportunity: {temporal_data[node].opportunity}]")
         print("-" * 40)
         found_issues = False
         for issue_type, issues in timing_issues[node].items():

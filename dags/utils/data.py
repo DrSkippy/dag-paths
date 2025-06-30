@@ -9,12 +9,13 @@ logger = logging.getLogger(__name__)
 
 class NodeTemporalInfo:
     """Class to store temporal information for a node."""
-    def __init__(self, start_date: Optional[str], target_date: Optional[str], closed_date: Optional[str]):
+    def __init__(self, start_date: Optional[str], target_date: Optional[str], closed_date: Optional[str], opportunity: Optional[str]):
         self.start_date = self._parse_date(start_date)
         self.target_date = self._parse_date(target_date)
         self.closed_date = self._parse_date(closed_date)
         self.in_degree = None
         self.out_degree = None
+        self.opportunity = opportunity
     
     def _parse_date(self, date_str: Optional[str]) -> Optional[datetime]:
         """Parse date string to datetime object."""
@@ -31,7 +32,8 @@ class NodeTemporalInfo:
                 f"Target: {self.target_date}, "
                 f"Closed: {self.closed_date}, "
                 f"In-Degree: {self.in_degree}, "
-                f"Out-Degree: {self.out_degree}")
+                f"Out-Degree: {self.out_degree}"
+                f"Opportunity: {self.opportunity}")
 
 def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
     """Read DAG data from CSV file.
@@ -78,7 +80,8 @@ def read_dag_data(data_file: Path) -> Tuple[Dict, Dict[str, NodeTemporalInfo]]:
                 temporal_data[relationship_id] = NodeTemporalInfo(
                     start_date=row['START_DATETIME'],
                     target_date=row['TARGET_DATETIME'],
-                    closed_date=row['CLOSED_DATETIME']
+                    closed_date=row['CLOSED_DATETIME'],
+                    opportunity=row['OPPORTUNITY_NAME']
                 )
             
             # Add relationship
